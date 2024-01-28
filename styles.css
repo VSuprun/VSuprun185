@@ -7,7 +7,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #ffffff; /* Белый цвет фона в светлой теме */
+    background-color: #ffffff;
     transition: background-color 0.5s ease;
 }
 
@@ -16,18 +16,18 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     padding: 40px;
     border-radius: 10px;
-    background-color: #fd7e14; /* Оранжевый цвет в светлой теме */
-    color: #343a40; /* Цвет текста в светлой теме */
+    background-color: #fd7e14;
+    color: #343a40;
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .dark-theme {
-    background-color: #000000; /* Черный цвет фона в темной теме */
+    background-color: #000000;
 }
 
 .dark-theme .container {
-    background-color:  rgb(162, 0, 162); /* Фиолетовый цвет в темной теме */
-    color: #ffffff; /* Цвет текста в темной теме */
+    background-color: rgb(162, 0, 162);
+    color: #ffffff;
 }
 
 h1 {
@@ -42,7 +42,7 @@ ul {
 }
 
 li {
-    margin: 0 10px; /* промежуток между кнопками */
+    margin: 0 10px;
 }
 
 a {
@@ -126,4 +126,29 @@ input:checked + .slider:before {
 .theme-label {
     margin-left: 10px;
     color: #343a40;
+}
+
+/* Добавим стили для мобильной версии */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    ul {
+        flex-direction: column;
+    }
+
+    li {
+        margin: 10px 0; 
+    }
+
+    a {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .theme-toggle {
+        top: 10px;
+        right: 10px;
+    }
 }
