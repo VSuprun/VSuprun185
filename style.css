@@ -1,4 +1,4 @@
-.header,.menu,.menu-icon,button {
+* {
     user-select: none; /* Запрет на выделение текста и элементов на странице */
 }
 
