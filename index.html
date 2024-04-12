@@ -1,29 +1,36 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Ваши социальные сети</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>V.Suprun</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Связаться с <br>Vladimir Suprun</h1>
-        <div class="theme-toggle">
-            <label class="switch">
-                <input type="checkbox" id="theme-toggle-checkbox">
-                <span class="slider round"></span>
-            </label>
-            <span class="theme-label">Светлая тема</span>
-        </div>
-        <ul>
-            <li><a href="https://Instagram.com/V.Suprun185" target="_blank">Instagram</a></li>
-            <li><a href="https://t.me/v_suprun185" target="_blank">Telegram</a></li>
-            <li><a href="mailto:v.suprun185@gmail.com" target="_blank">E-Mail</a></li>
-            <!-- Добавьте другие социальные сети по аналогии -->
-        </ul>
-    </div>
-    <script src="scripts.js"></script>
+  <div class="header">
+      <div class="menu-icon" onclick="toggleMenu()">
+          &#8801; <!-- Символ трех горизонтальных линий (≡) -->
+      </div>
+      V.Suprun
+  </div>
+  <div class="menu">
+      <ul>
+          <li><a href="abm.html">About Me</a></li>
+          <li><a href="https://www.google.com/"> </a></li>
+          <li><a href="https://www.google.com/"> </a></li>
+      </ul>
+  </div>
+  <!-- Остальной контент -->
+  <button class="instagram-btn" data-url="https://Instagram.com/V.Suprun185">
+    <span>Instagram</span>
+</button>
+<button class="telegram-btn" data-url="https://t.me/v_suprun185">
+    <span>Telegram</span>
+</button>
+<button class="email-btn" data-url="mailto:v.suprun185@gmail.com">
+    <span>E-Mail</span>
+</button>
+  <script src="main.js"></script>
 </body>
 </html>
