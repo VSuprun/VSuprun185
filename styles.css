@@ -1,0 +1,229 @@
+.header,.menu,.menu-icon,button {
+    user-select: none; 
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+:root {
+    --x: 0;
+    --y: 0;
+    --xp: 0;
+    --yp: 0;
+    --hue: calc(0 + (var(--xp) * 500));
+    --bg: #303030;
+    --size: 100px;
+    --glow: radial-gradient(
+            50% 50% at center,
+            hsl(var(--hue) 80% 85%),
+            hsl(var(--hue) 80% 70%),
+            transparent
+        )
+        calc((var(--x) * 1px) - (var(--size) * 0.5))
+        calc((var(--y) * 1px) - (var(--size) * 0.5)) / var(--size) var(--size) no-repeat fixed;
+}
+
+.controls {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+}
+
+body {
+    display: flex;
+    place-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 95vh;
+    font-family:  "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
+    background: var(--bg);
+}
+
+button {
+    border-radius: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1ch;
+    background: var(--bg);
+    border: 4px solid transparent;
+    box-shadow: 0 1px hsl(0 0% 100% / 0.15) inset;
+    cursor: pointer;
+    background:
+        linear-gradient(var(--bg), var(--bg)) padding-box,
+        var(--glow),
+        linear-gradient(black, black) border-box;
+    transition: background-size 0.24s;
+    touch-action: none;
+    position: relative;
+    padding: 1rem 2rem;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    box-shadow: 0 1px hsl(0 0% 100% / 0.15) inset;
+    background: var(--bg);
+    z-index: 2;
+    border-radius: 1rem;
+}
+
+button span {
+    background: var(--glow), black;
+    background-clip: text;
+    color: white;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    position: relative;
+    inset: 0;
+}
+
+:root:has(button:active) {
+    --size: 300px;
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    filter: blur(20px);
+    border: 4px solid transparent;
+    background: var(--glow);
+    border-radius: 1rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-size: 2em;
+    font-family: 'Sacramento', cursive;
+    font-weight: bold; 
+    padding: 0 20px; 
+    animation: fadeInUp 1s ease-out;
+    text-align: center; 
+}
+
+.menu-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px; 
+    font-size: 48px; 
+    color: #fff; 
+    cursor: pointer;
+    z-index: 1000; 
+}
+
+.menu {
+    position: fixed;
+    top: 100px; 
+    left: -150px; 
+    width: 150px;
+    height: 100%;
+    background-color: black;
+    transition: left 0.5s ease; 
+    z-index: 999;  
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    padding: 10px;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu ul li a:hover {
+    text-decoration: underline;
+}
+    
+.abm {
+	text-align: center;
+	color: white;
+    text-decoration: none;
+}
+
+.link-magenta {
+    color: magenta;
+    text-decoration: none;
+}
+
+.description-container {
+    position: relative;
+    width: 300px;
+    border: 3px solid #222222;
+    border-radius: 8px;
+    background-color: black;
+    overflow: hidden;
+}
+
+.language-selector {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10; /* Обеспечиваем, чтобы селектор языка был выше остальных элементов */
+}
+
+.description-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.description {
+    display: none;
+    padding: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.description.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+select {
+    background-color: #575757;
+    color: white;
+}
+

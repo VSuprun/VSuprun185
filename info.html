@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>V.Suprun</title>
+</head>
+<body>
+  <div class="header"> <!-- Верхний банер -->
+      <div class="menu-icon" onclick="toggleMenu()">
+          &#8801; <!-- Символ трех горизонтальных линий (≡) -->
+      </div>
+      <a href="index.html" class="abm">V.Suprun</a>
+  </div>
+  <div class="menu"> <!-- Меню -->
+      <ul>
+          <li><a href="index.html">Contact</a></li>
+          <li><a href="info.html">Info</a></li>
+          <li><a href="https://www.google.com/"> </a></li>
+      </ul>
+  </div>
+  <!--<div class="abm">
+    Временно незавершенная страница.<br>Понимайте меня правильно, создание сайтов - не мое основное занятие.
+    <hr>
+    Temporarily unfinished page.<br>Understand me correctly, creating websites is not my main occupation.
+</div>-->
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+<div class="description-container"> 
+    <div class="language-selector"> <!-- Список языков -->
+        <select id="languageSelect">
+            <option value="zh">🇨🇳 中文 (Chinese)</option>
+            <option value="cs">🇨🇿 Čeština (Czech)</option>
+            <option value="en">🇺🇸 English</option>
+            <option value="fr">🇫🇷 Français (French)</option>
+            <option value="de">🇩🇪 Deutsch (German)</option>
+            <option value="it">🇮🇹 Italiano (Italian)</option>
+            <option value="ja">🇯🇵 日本語 (Japanese)</option>
+            <option value="pl">🇵🇱 Polski (Polish)</option>
+            <option value="pt">🇵🇹 Português (Portuguese)</option>
+            <option value="ru" selected>🇷🇺 Русский (Russian)</option>
+            <option value="es">🇪🇸 Español (Spanish)</option>
+            <option value="ua">🇺🇦 Українська (Ukrainian)</option>
+        </select>
+    </div>
+    <div class="description-content" id="descriptionContent"> <!--Китайский-->
+        <div class="description" data-lang="zh">
+            <h2 style="color: lightgreen;">关于我:</h2>
+            <ul>
+                <li>名字: 弗拉基米尔</li>
+                <li>年龄: 23</li>
+                <li>前端开发者</li>
+                <li>
+                    城市:
+                    <a class="link-magenta" rel="noopener noreferrer" target="_blank" href="https://clck.ru/3AcJMQ"> 华沙</a>
+                </li>   
+                <li>
+                    家乡: 
+                    <a class="link-magenta" rel="noopener noreferrer" target="_blank" href="https://clck.ru/3AcJET"> 别尔日安斯克</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="description-content" id="descriptionContent"> <!--Чешский-->
+        <div class="description" data-lang="cs">
+            <h2 style="color: lightgreen;">O mně:</h2>
+            <ul>
+                <li>Jméno: Vladimír</li>
+                <li>Věk: 23</li>
+                <li>Front-End Developer</li>
+                <li>
+                    Město:
+                    <a class="link-magenta" rel="noopener noreferrer" target="_blank" href="https://clck.ru/3AcJMQ"> Varšava</a>
+                </li>
+                <li>
+                    Domovské město: 
+                    <a class="link-magenta" rel="noopener noreferrer" target="_blank" href="https://clck.ru/3AcJET"> Berdjansk</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="description-content" id="descriptionContent"> <!--Английский-->
+        <div class="description" data-lang="en">
+            <h2 style="color: lightgreen;">About me:</h2>
+            <ul>
+                <li>Name: Vladimir</li>
+                <li>Age: 23</li>
+                <li>Front-End Developer</li>
+                <li>
+                    City:
+                    <a class="link-magenta" rel="noopener noreferrer" target="_blank" href="https://clck.ru/3AcJMQ"> Warsaw</a>
+                </li>
+                <li>
+                    Hometown: 
+                    <a class="link-magenta" rel="noopener noreferrer" target="_blank" href="https://clck.ru/3AcJET"> Berdyansk</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="description-content" id="descriptionContent"> <!--Французский-->
+        <div class="description" data-lang="fr">
+            <h2 style="color: lightgreen;">À propos de moi:</h2>
+            <ul>
+                <li>Nom: Vladimir</li>
+                <li>Âge: 23</li>
+                <li>Développeur Front-End</li>
+                <li>
+                    Ville:
+                    <a class="link-magenta" rel="noopener noreferrer" target="_blank" href="https://clck.ru/3AcJMQ"> Varsovie</a>
+                </li>
+                <li>
+                    Ville natale: 
+                    <a class="link-magenta" rel="noopener noreferrer" target="_blank" href="https://clck.ru/3AcJET"> Berdiansk</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="description-content" id="descriptionContent"> <!--Немецкий-->
+        <div class="description" data-lang="de">
+            <h2 style="color: lightgreen;">Über mich:</h2>
+            <ul>
+                <li>Name: Wladimir</li>
+                <li>Alter: 23</li>
+                <li>Front-End Entwickler</li>
+                <li>
+                    Stadt:
+                    <a class="link-magenta" rel="noopener noreferrer" target="_blank" href="https://clck.ru/3AcJMQ"> Warschau</a>
+                </li>
+                <li>
+                    Heimatstadt: 
+                    <a class="link-magenta" rel="noopener noreferrer" target="_blank" href="https://clck.ru/3AcJET"> Berdjansk</a>
+            </ul>
+        </div>
+    </div>
+    <div class="description-content" id="descriptionContent"> <!--Итальянский-->
+        <div class="description" data-lang="it">
+            <h2 style="color: lightgreen;">Su di me:</h2>
+            <ul>
+                <li>Nome: Vladimir</li>
+                <li>Età: 23</li>
+                <li>Sviluppatore Front-End</li>
+                <li>
+                    Città:
+                    <a class="link-magenta" rel="noopener noreferrer" target="_blank" href="https://clck.ru/3AcJMQ"> Varsavia</a>
+                </li>
+                <li>
+                    Città natale: 
+                    <a class="link-magenta" rel="noopener noreferrer" target="_blank" href="https://clck.ru/3AcJET"> Berdiansk</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="description-content" id="descriptionContent"> <!--Японский-->
+        <div class="description" data-lang="ja">
+            <h2 style="color: lightgreen;">私について:</h2>
+            <ul>
+                <li>名前: ウラジミール</li>
+                <li>年齢: 23</li>
+                <li>フロントエンド開発者</li>
+                <li>
+                    都市:
+                    <a class="link-magenta" rel="noopener noreferrer" target="_blank" href="https://clck.ru/3AcJMQ"> ワルシャワ</a>
+                </li>
+                <li>
+                    出身地: 
+                    <a class="link-magenta" rel="noopener noreferrer" target="_blank" href="https://clck.ru/3AcJET"> ベルジャンスク</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="description-content" id="descriptionContent"> <!--Польский-->
+        <div class="description" data-lang="pl">
+            <h2 style="color: lightgreen;">O mnie:</h2>
+            <ul>
+                <li>Imię: Władimir</li>
+                <li>Wiek: 23</li>
+                <li>Front-End Developer</li>
+                <li>
+                    Miasto:
+                    <a class="link-magenta" rel="noopener noreferrer" target="_blank" href="https://clck.ru/3AcJMQ"> Warszawa</a>
+                </li>
+                <li>
+                    Miasto rodzinne: 
+                    <a class="link-magenta" rel="noopener noreferrer" target="_blank" href="https://clck.ru/3AcJET"> Berdiank</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="description-content" id="descriptionContent"> <!--Португальский-->
+        <div class="description" data-lang="pt">
+            <h2 style="color: lightgreen;">Sobre mim:</h2>
+            <ul>
+                <li>Nome: Vladimir</li>
+                <li>Idade: 23</li>
+                <li>Desenvolvedor Front-End</li>
+                <li>
+                    Cidade:
+                    <a class="link-magenta" rel="noopener noreferrer" target="_blank" href="https://clck.ru/3AcJMQ"> Varsóvia</a>
+                </li>
+                <li>
+                    Cidade natal: 
+                    <a class="link-magenta" rel="noopener noreferrer" target="_blank" href="https://clck.ru/3AcJET"> Berdiansk</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="description-content" id="descriptionContent"> <!--Русский-->
+        <div class="description" data-lang="ru">
+            <h2 style="color: lightgreen;">Обо мне:</h2>
+            <ul>
+                <li>Имя: Владимир</li>
+                <li>Возраст: 23</li>
+                <li>Фронт-Енд Разработчик</li>
+                <li>
+                    Город:
+                    <a class="link-magenta" rel="noopener noreferrer" target="_blank" href="https://clck.ru/3AcJMQ"> Варшава</a>
+                </li>
+                <li>
+                    Родной город: 
+                    <a class="link-magenta" rel="noopener noreferrer" target="_blank" href="https://clck.ru/3AcJET"> Бердянск</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="description-content" id="descriptionContent"> <!--Испанский-->
+        <div class="description" data-lang="es">
+            <h2 style="color: lightgreen;">Sobre mí:</h2>
+            <ul>
+                <li>Nombre: Vladimir</li>
+                <li>Edad: 23</li>
+                <li>Desarrollador Front-End</li>
+                <li>
+                    Ciudad:
+                    <a class="link-magenta" rel="noopener noreferrer" target="_blank" href="https://clck.ru/3AcJMQ"> Varsovia</a>
+                </li>
+                <li>
+                    Ciudad natal: 
+                    <a class="link-magenta" rel="noopener noreferrer" target="_blank" href="https://clck.ru/3AcJET"> Berdyansk</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="description-content" id="descriptionContent"> <!--Украинский-->
+        <div class="description" data-lang="ua">
+            <h2 style="color: lightgreen;">Про мене:</h2>
+            <ul>
+                <li>Ім'я: Володимир</li>
+                <li>Вік: 23</li>
+                <li>Розробник Front-End</li>
+                <li>
+                    Місто:
+                    <a class="link-magenta" rel="noopener noreferrer" target="_blank" href="https://clck.ru/3AcJMQ"> Варшава</a>
+                </li>
+                <li>
+                    Рідне місто: 
+                    <a class="link-magenta" rel="noopener noreferrer" target="_blank" href="https://clck.ru/3AcJET"> Бердянськ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="js.js"></script>
+</body>
+</html>
