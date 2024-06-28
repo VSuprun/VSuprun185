@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Order Instrucion for touchscrean</title>
+</head>
+<body>
+    <div>
+        <div class="code">
+            <p>
+            Code:<br>
+            <br>
+                <code>
+                    function changeTextStyle(element, color, fontWeight, backgroundColor) {<br>
+                    element.style.color = color;<br>
+                    element.style.fontWeight = fontWeight;<br>
+                    element.style.backgroundColor = backgroundColor;<br>
+                    }<br>
+                    <br>
+                    function findAndChangeTextStyle() {<br>
+                    var elements = document.querySelectorAll('body *');<br>
+                    <br>
+                    elements.forEach(function(element) {<br>
+                    var text = element.textContent.trim();<br>
+                    <br>
+                    // Edit colors<br>
+                    switch (text) {<br>
+                    case 'DPOST-PRIOG [C]':<br>
+                    changeTextStyle(element, 'white', 'bold', '#04FF00');<br>
+                    break;<br>
+                    case 'DPOST-PRIOE [D]':<br>
+                    changeTextStyle(element, 'white', 'bold', '#0080FF');<br>
+                    break;<br>
+                    case 'DPOST-TRKD [E]':<br>
+                    changeTextStyle(element, 'white', 'bold', '#FB00FF');<br>
+                    break;<br>
+                    case 'DPOST-PRIOG [F]':<br>
+                    changeTextStyle(element, 'white', 'bold', '#FFAA00');<br>
+                    break;<br>
+                    case 'DPOST-PRIOE [G]':<br>
+                    changeTextStyle(element, 'white', 'bold', '#874888');<br>
+                    break;<br>
+                    default:<br>
+                    break;<br>
+                    }<br>
+                    });<br>
+                    }<br>
+                    <br>
+                    window.addEventListener('DOMContentLoaded', findAndChangeTextStyle);<br>
+                    document.addEventListener('DOMSubtreeModified', findAndChangeTextStyle);<br>
+                </code>
+        </div>
+        <h3>Code of colors:</h3>
+        <div class="colors">
+            <p class="border" style="background-color: #04FF00;">04FF00</p>
+            <p class="border" style="background-color: #0080ff;">0080FF</p>
+            <p class="border" style="background-color: #644117;">644117</p>
+            <p class="border" style="background-color: #000000;">000000</p>
+            <p class="border" style="background-color: #FB00FF;">FB00FF </p>
+            <p class="border" style="background-color: #874888;">874888 </p>
+            <p class="border" style="background-color: #FFAA00;">FFAA00 </p>
+        </div>
+    </div>
+</body>
+</html>

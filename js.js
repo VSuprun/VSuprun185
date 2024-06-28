@@ -75,10 +75,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Функция, которая будет вызываться при нажатии комбинации клавиш
 function handleKeyPress(event) {
-  // Проверяем комбинацию клавиш (например,  Shift + J)
+  // Проверяем комбинацию клавиш (например,  Shift + F)
   if (event.shiftKey && event.key === 'J') {
       // Переходим на другую страницу
-      window.location.replace('https://google.com');
+      window.location.href='work/oi.html';
   }
 }
 
