@@ -7,11 +7,10 @@
     <title>Order Instrucion for touchscrean</title>
 </head>
 <body>
+    <button id="toggleButton"></button>   
+    <img src="https://www.radial.com/files/2022/09/08/Radial-bpost-Group-logo.png" width="10%" style="float: right;">
     <div>
-        <div class="code">
-            <p>
-            Code:<br>
-            <br>
+        <div id="div1" style="color: #000000;">
                 <code>
                     function changeTextStyle(element, color, fontWeight, backgroundColor) {<br>
                     element.style.color = color;<br>
@@ -51,9 +50,9 @@
                     window.addEventListener('DOMContentLoaded', findAndChangeTextStyle);<br>
                     document.addEventListener('DOMSubtreeModified', findAndChangeTextStyle);<br>
                 </code>
+                <br>
         </div>
-        <h3>Code of colors:</h3>
-        <div class="colors">
+        <div id="div2">
             <p class="border" style="background-color: #04FF00;">04FF00</p>
             <p class="border" style="background-color: #0080ff;">0080FF</p>
             <p class="border" style="background-color: #644117;">644117</p>
@@ -63,5 +62,7 @@
             <p class="border" style="background-color: #FFAA00;">FFAA00 </p>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

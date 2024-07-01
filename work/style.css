@@ -1,19 +1,20 @@
-.code {
-    background-color: black;
-    color: white;
-}
-
-.colors {
+body {
     font-weight: bold; ;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
     color: white; 
-    text-align: center;
-    
 }
 
 .border {
     border: 2px solid black;
     margin: 10px;
+    text-align: center;
 
+}
+
+#div1, #div2 {
+    display: none;
+}
+
+button {
+    border: 2px solid black;
+    margin: 10px;
 }
