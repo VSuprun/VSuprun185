@@ -78,7 +78,7 @@ function handleKeyPress(event) {
   // Проверяем комбинацию клавиш (например,  Shift + F)
   if (event.shiftKey && event.key === 'J') {
       // Переходим на другую страницу
-      window.location.href='work/oi.html';
+      window.location.href='oi.html';
   }
 }
 
