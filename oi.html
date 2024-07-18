@@ -27,6 +27,13 @@
             border: none;
             cursor: pointer;
         }
+        #copyButton {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
         #result {
             margin-top: 20px;
             padding: 20px;
@@ -126,6 +133,7 @@
     </div>
 </div>
     <div id="result" style="display:none;"></div>
+    <button id="copyButton" style="display: none;">Copy</button>
     <script>
         document.getElementById('createBtn').addEventListener('click', function() {
             const select1 = document.getElementById('select1').value;
@@ -175,7 +183,16 @@
 
             document.getElementById('result').innerText = resultText;
             document.getElementById('result').style.display = 'block';
+            document.getElementById('copyButton').style.display = 'block';
         });
+
+document.querySelector("#copyButton").addEventListener("click", function() {
+    navigator.clipboard.writeText(document.querySelector("#result").innerText).then(function() {
+        console.log('Text copied to clipboard');
+    }).catch(function(error) {
+        console.error('Error:', error);
+    });
+});
     </script>
 </body>
 </html>
