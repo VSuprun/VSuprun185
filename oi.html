@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Instrucion for touchscrean</title>
+    <title>Выбор пунктов</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -21,13 +21,6 @@
             margin-bottom: 10px;
         }
         #createBtn {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        #copyButton {
             padding: 10px 20px;
             background-color: #4CAF50;
             color: white;
@@ -133,7 +126,6 @@
     </div>
 </div>
     <div id="result" style="display:none;"></div>
-    <button id="copyButton" style="display: none;">Copy</button>
     <script>
         document.getElementById('createBtn').addEventListener('click', function() {
             const select1 = document.getElementById('select1').value;
@@ -142,7 +134,8 @@
             const select4 = document.getElementById('select4').value;
             const select5 = document.getElementById('select5').value;
 
-            const resultText = `function changeTextStyle(element, color, fontWeight, backgroundColor) {
+            const resultText = `
+                function changeTextStyle(element, color, fontWeight, backgroundColor) {
                     element.style.color = color;
                     element.style.fontWeight = fontWeight;
                     element.style.backgroundColor = backgroundColor;
@@ -176,23 +169,22 @@
                         }
                     });
                 }
-
+                
                 window.addEventListener('DOMContentLoaded', findAndChangeTextStyle);
-                document.addEventListener('DOMSubtreeModified', findAndChangeTextStyle);
+                const observer = new MutationObserver((mutationsList) => {
+                 mutationsList.forEach((mutation) => {
+                   if (mutation.addedNodes.length) {
+                     findAndChangeTextStyle();
+                      }
+                  });
+                });
+
+                observer.observe(document.body, { childList: true, subtree: true });
             `;
 
             document.getElementById('result').innerText = resultText;
             document.getElementById('result').style.display = 'block';
-            document.getElementById('copyButton').style.display = 'block';
         });
-
-document.querySelector("#copyButton").addEventListener("click", function() {
-    navigator.clipboard.writeText(document.querySelector("#result").innerText).then(function() {
-        console.log('Text copied to clipboard');
-    }).catch(function(error) {
-        console.error('Error:', error);
-    });
-});
     </script>
 </body>
 </html>
