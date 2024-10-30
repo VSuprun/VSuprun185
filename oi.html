@@ -169,9 +169,17 @@
                         }
                     });
                 }
-
+                    
                 window.addEventListener('DOMContentLoaded', findAndChangeTextStyle);
-                document.addEventListener('DOMSubtreeModified', findAndChangeTextStyle);
+                const observer = new MutationObserver((mutationsList) => {
+                 mutationsList.forEach((mutation) => {
+                   if (mutation.addedNodes.length) {
+                     findAndChangeTextStyle();
+                      }
+                  });
+                });
+
+                observer.observe(document.body, { childList: true, subtree: true });
             `;
 
             document.getElementById('result').innerText = resultText;
