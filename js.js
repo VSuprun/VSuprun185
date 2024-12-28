@@ -19,10 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
       window.location.href = 'https://Instagram.com/V.Suprun185';
   });
 
-  telegramBtn.addEventListener('click', function() {
-      window.location.href = 'https://t.me/v_suprun185';
-  });
-
   emailBtn.addEventListener('click', function() {
       window.location.href = 'mailto:v.suprun185@gmail.com';
   });
@@ -69,18 +65,14 @@ document.addEventListener('DOMContentLoaded', function () {
       showDescription(selectedLang);
   });
 
-  // Show the default language (English) on page load
   showDescription(languageSelect.value);
 });
 
 // Функция, которая будет вызываться при нажатии комбинации клавиш
 function handleKeyPress(event) {
-  // Проверяем комбинацию клавиш (например,  Shift + F)
   if (event.shiftKey && event.key === 'J') {
-      // Переходим на другую страницу
       window.location.href='oi.html';
   }
 }
 
-// Добавляем обработчик события keydown для всего документа
 document.addEventListener('keydown', handleKeyPress);
