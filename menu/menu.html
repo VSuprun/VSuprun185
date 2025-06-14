@@ -6,34 +6,35 @@
     <link rel="stylesheet" href="menu.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.2-0/ionicons.min.js"></script>
     <script defer src="menu.js"></script>
-    <title>Document</title>
+    <link rel="icon" href="/Content/vsuprun.svg" type="image/svg+xml">
+    <title>V.Suprun</title>
 </head>
 <body>
-  
+
     <div class="main">
         <div class="navigation">
-          <span style="--i: 0; --x: -1; --y: 0">
+          <span style="--i: 0; --x: -1; --y: 0" data-tooltip="">
             <a href=""><ion-icon name=""></ion-icon></a>
           </span>
-          <span style="--i: 1; --x: 1; --y: 0">
-            <a href=""><ion-icon name=""></ion-icon></a>
+          <span style="--i: 1; --x: 1; --y: 0" data-tooltip="Bacardi">
+            <a href="work-BACARDI/menu.html"><ion-icon name="cube-outline"></ion-icon></a>
           </span>
-          <span style="--i: 2; --x: 0; --y: -1">
+          <span style="--i: 2; --x: 0; --y: -1" data-tooltip="E-Mail">
             <a href="mailto:v.suprun@hotmail.com"><ion-icon name="mail-outline"></ion-icon></a>
           </span>
-          <span style="--i: 3; --x: 0; --y: 1">
+          <span style="--i: 3; --x: 0; --y: 1" data-tooltip="Скрипты">
             <a href="scripts/menu.html"><ion-icon name="logo-microsoft"></ion-icon></a>
           </span>
-          <span style="--i: 4; --x: -1; --y: 1">
+          <span style="--i: 4; --x: -1; --y: 1" data-tooltip="">
             <a href=""><ion-icon name=""></ion-icon></a>
           </span>
-          <span style="--i: 5; --x: -1; --y: -1">
+          <span style="--i: 5; --x: -1; --y: -1" data-tooltip="Начальная страница">
             <a href="/loader/loading_main.html"><ion-icon name="home-outline"></ion-icon></a>
           </span>
-          <span style="--i: 6; --x: 1; --y: -1">
+          <span style="--i: 6; --x: 1; --y: -1" data-tooltip="Instagram">
             <a href="http://www.instagram.com/v.suprun185"><ion-icon name="logo-instagram"></ion-icon></a>
           </span>
-          <span style="--i: 7; --x: 1; --y: 1">
+          <span style="--i: 7; --x: 1; --y: 1" data-tooltip="">
             <a href=""><ion-icon name=""></ion-icon></a>
           </span>
         </div>
@@ -41,6 +42,38 @@
           <ion-icon name="close-outline"></ion-icon>
         </div>
       </div>
-      
+
+
+      <div id="hover-tooltip" 
+      style="
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 20px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+  z-index: 9999;
+"></div>
+
+<script>
+  const tooltip = document.getElementById('hover-tooltip');
+  document.querySelectorAll('.navigation span').forEach(span => {
+    span.addEventListener('mouseenter', () => {
+      const text = span.getAttribute('data-tooltip') || '';
+      tooltip.textContent = text;
+      tooltip.style.opacity = text ? '1' : '0';
+    });
+    span.addEventListener('mouseleave', () => {
+      tooltip.style.opacity = '0';
+    });
+  });
+</script>
 </body>
 </html>

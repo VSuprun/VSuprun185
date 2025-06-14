@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Просмотр PDF локально</title>
+  <style>
+    html, body {
+      margin: 0; padding: 0; height: 100%;
+      background: #121212;
+      overflow: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #eee;
+    }
+    iframe {
+      width: 100vw;
+      height: 100vh;
+      border: none;
+      display: block;
+    }
+    #back-button {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background: rgba(98, 0, 234, 0.8);
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 16px;
+      text-decoration: none;
+      cursor: pointer;
+      user-select: none;
+      box-shadow: 0 0 10px #6200ea;
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+    }
+    #back-button:hover {
+      background: rgba(55, 0, 179, 0.9);
+    }
+  </style>
+</head>
+<body>
+
+<a id="back-button" href="/menu/work-BACARDI/menu.html" target="_blank" rel="noopener noreferrer">← Назад</a>
+
+<iframe src="InBoundBacardi.pdf"></iframe>
+
+</body>
+</html>
