@@ -68,11 +68,4 @@ document.addEventListener('DOMContentLoaded', function () {
   showDescription(languageSelect.value);
 });
 
-// Функция, которая будет вызываться при нажатии комбинации клавиш
-function handleKeyPress(event) {
-  if (event.shiftKey && event.key === 'J') {
-      window.location.href='oi.html';
-  }
-}
-
 document.addEventListener('keydown', handleKeyPress);

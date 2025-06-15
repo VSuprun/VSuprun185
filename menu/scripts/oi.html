@@ -57,6 +57,27 @@
         }
         /* tooltip settings 👇 */
 
+            .button {
+      position: fixed;
+      top: 15px;
+      background: #8000db;
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 16px;
+      text-decoration: none;
+      cursor: pointer;
+      user-select: none;
+      box-shadow: 0 0 10px #8000db;
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+    }
+    .button:hover {
+      background: #8000db;
+    }
+    #back-button {
+      left: 200px;}
+
 .copy {
   /* button */
   --button-bg: #353434;
@@ -178,6 +199,7 @@
 }
     </style>
 </head>
+<a id="back-button" class="button" href="/menu/scripts/menu.html" target="" rel="noopener noreferrer">← Назад</a>
 <body>
     <img src="https://www.radial.com/files/2022/09/08/Radial-bpost-Group-logo.png" width="10%">
     <div class="container">
