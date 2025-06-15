@@ -42,14 +42,14 @@ button {
   padding: 10px;
   border: none;
   border-radius: 6px;
-  background-color: #6a0dad;
+  background-color: #8000db;
   color: white;
   font-weight: bold;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #8b2ddb;
+  background-color: #8000db;
 }
 
 .guest-link {
