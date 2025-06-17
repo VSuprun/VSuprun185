@@ -229,7 +229,7 @@ select {
 
 video {
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     height: auto;
     aspect-ratio: 1 / 1; /* сохраняет квадрат */
   }
