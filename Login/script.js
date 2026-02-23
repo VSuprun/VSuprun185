@@ -1,8 +1,6 @@
 // Пример списка аккаунтов
 const accounts = [
   { username: 'vs', password: 'passvs' },
-  { username: 'ip', password: 'passip' },
-  { username: 'yk', password: 'passyk' },
 ];
 
 function login() {
@@ -29,7 +27,7 @@ function continueAsGuest() {
   window.location.href = "../loader/loading_main.html";
 }
 
-// Обработка Enter (оставляем как есть)
+// Обработка Enter
 document.addEventListener('DOMContentLoaded', () => {
   const inputs = document.querySelectorAll('#username, #password');
 
